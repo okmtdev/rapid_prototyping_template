@@ -21,7 +21,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Build
-        run: npm build
+        run: npm run build
         working-directory: ${{ env.WORKING_DIR }}
 
       - name: Deploy
