@@ -2,8 +2,26 @@
 
 本レポジトリは Web アプリケーションのラピッドプロトタイピングのためのテンプレート（Rapid Prototyping Template in English）です。
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [概要](#%E6%A6%82%E8%A6%81)
+  - [Rapid Prototyping Template の想定利用者](#rapid-prototyping-template-%E3%81%AE%E6%83%B3%E5%AE%9A%E5%88%A9%E7%94%A8%E8%80%85)
+  - [IT の新規ビジネスに存在する課題](#it-%E3%81%AE%E6%96%B0%E8%A6%8F%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E8%AA%B2%E9%A1%8C)
+  - [使用技術](#%E4%BD%BF%E7%94%A8%E6%8A%80%E8%A1%93)
+  - [Rapid Prototyping Template のアーキテクチャ](#rapid-prototyping-template-%E3%81%AE%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)
+- [Rapid Prototyping Template の利用方法](#rapid-prototyping-template-%E3%81%AE%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95)
+  - [アカウント準備](#%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E6%BA%96%E5%82%99)
+  - [インフラ準備](#%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%BA%96%E5%82%99)
+  - [GitHub Actions の準備](#github-actions-%E3%81%AE%E6%BA%96%E5%82%99)
+  - [アプリケーション開発](#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA)
+  - [infrastructure ディレクトリの説明](#infrastructure-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E8%AA%AC%E6%98%8E)
+  - [.github ディレクトリの説明](#github-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E8%AA%AC%E6%98%8E)
+  - [make init で失敗する場合](#make-init-%E3%81%A7%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
+- [今後の展望](#%E4%BB%8A%E5%BE%8C%E3%81%AE%E5%B1%95%E6%9C%9B)
+  - [私に協力してくれる方](#%E7%A7%81%E3%81%AB%E5%8D%94%E5%8A%9B%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B%E6%96%B9)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 概要
 
@@ -29,8 +47,6 @@ IT を活用したビジネスでは、まずはハリボテの試作品を用�
 
 このような OSS 活動や私の活動に興味がある方は本 README.md の下部にある「私に協力してくれる方」も目を通してください。
 
-## Rapid Prototyping Template の利用
-
 ### 使用技術
 
 - [Next.js](https://nextjs.org/): 昨今のフロントエンドのトレンドと汎用性の高さから Next.js を利用しています。別のフロントエンドフレームワークでも代用可能です。
@@ -55,6 +71,8 @@ graph LR
 - CloudFront の URL は [Basic 認証](https://ja.wikipedia.org/wiki/Basic%E8%AA%8D%E8%A8%BC)を求められます。
 - Basic 認証は CloudFront Function で実装しています。
 - GitHub Actions は Next.js のビルドと S3 へのアップロードをします。
+
+## Rapid Prototyping Template の利用方法
 
 ### アカウント準備
 
@@ -203,7 +221,7 @@ graph LR
     build --> deploy[Deploy]
 ```
 
-## make init で失敗する場合
+### make init で失敗する場合
 
 create-next-app の実行が失敗したようです。
 
