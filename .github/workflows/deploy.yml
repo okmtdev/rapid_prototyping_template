@@ -1,5 +1,12 @@
 name: deploy
-on: workflow_dispatch
+
+on:
+  push:
+    branches:
+      - main  # または対象のブランチ名
+    paths:
+      - 'prototype/**'
+  workflow_dispatch:
 
 jobs:
   deploy:
