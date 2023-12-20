@@ -30,6 +30,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           echo "AWS s3 sync"
-          aws s3 sync --region ap-northeast-1 ./${{ env.WORKING_DIR }}/out s3://${{ secrets.AWS_S3_BUCKET}} --delete
-          #echo "AWS CF reset"
-          #aws cloudfront create-invalidation --region ap-northeast-1 --distribution-id ${{ secrets.AWS_CF_ID }} --paths "/*"
+          aws s3 sync --region ap-northeast-1 ./{{ env.WORKING_DIR }}/out s3://${{ secrets.AWS_S3_BUCKET }} --delete
