@@ -98,7 +98,7 @@ $ gh repo clone okmtdev/rapid_prototyping_template
 
 Basic 認証はデフォルトでユーザ名が「user」、パスワードが「password」になっています。
 
-変更したい場合は`infrastructure/cloudfront.tf`の 72 行目の Basic 認証に関する部分を修正してください。
+変更したい場合は`infrastructure/cloudfront.tf`の Basic 認証の設定値 `authString` 行目を修正してください。
 
 ```
 $ cd infrastructure
